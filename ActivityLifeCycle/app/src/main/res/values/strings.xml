@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Activity Life Cycle</string>
+    <string name="go_to_second_activity">Ir a actividad siguiente</string>
+    <string name="digite_valor">Digite un valor</string>
+    <string name="requerido">El valor es requerido</string>
+</resources>
