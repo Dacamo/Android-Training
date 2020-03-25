@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4bc836b-ab25-43ff-a664-33d2144a0e8d" name="Default Changelist" comment="" />
+    <list default="true" id="e4bc836b-ab25-43ff-a664-33d2144a0e8d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ActivityLifeCycle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Login-MVP" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -110,8 +112,26 @@
       <option name="project" value="LOCAL" />
       <updated>1585171767673</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added a multimedia project">
+      <created>1585172092345</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585172092346</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added ActivityLifeCycle project" />
@@ -122,7 +142,8 @@
     <MESSAGE value="Added Internacionalization project" />
     <MESSAGE value="Added ListView project" />
     <MESSAGE value="Added AutoComplete project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added AutoComplete project" />
+    <MESSAGE value="Added a multimedia project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a multimedia project" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
