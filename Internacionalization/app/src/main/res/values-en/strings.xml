@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Internacionalization</string>
+    <string name="saludo">Hello world!</string>
+    <string name="icono">Bike Icon</string>
+    <string name="avion">Airplane Icon</string>
+</resources>
