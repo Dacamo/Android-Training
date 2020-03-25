@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Form</string>
+    <string name="digite_nombre">Digite el Nombre</string>
+    <string name="digite_apellido">Digite el Apellido</string>
+    <string name="seleccione_fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="Aceptar">Aceptar</string>
+    <string name="requerido">El valor es requerido</string>
+</resources>
