@@ -96,7 +96,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585171456593</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added ListView project">
+      <created>1585171695740</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585171695740</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added AutoComplete project">
+      <created>1585171767673</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585171767673</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -106,7 +120,9 @@
     <MESSAGE value="Added LifeCycle project" />
     <MESSAGE value="Added OnClick-Event project" />
     <MESSAGE value="Added Internacionalization project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Internacionalization project" />
+    <MESSAGE value="Added ListView project" />
+    <MESSAGE value="Added AutoComplete project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added AutoComplete project" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
