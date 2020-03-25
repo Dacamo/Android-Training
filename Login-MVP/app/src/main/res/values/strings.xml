@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Login MVP</string>
+    <string name="credenciales_requeridas">Las credenciales son requeridas</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="requerido">Requerido</string>
+    <string name="credenciales_no_validas">Usuario y/o contraseña no validos</string>
+    <string name="saludo">Bienvenido</string>
+</resources>
