@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sistema solar</string>
+    <string name="mi_sistema_solar">Mi sistema solar</string>
+    <string name="buscar_lb">Buscar...</string>
+</resources>
