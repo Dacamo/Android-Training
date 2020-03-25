@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4bc836b-ab25-43ff-a664-33d2144a0e8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ActivityLifeCycle/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/ActivityLifeCycle/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ActivityLifeCycle/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ActivityLifeCycle/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ActivityLifeCycle/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ActivityLifeCycle/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ActivityLifeCycle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ActivityLifeCycle/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e4bc836b-ab25-43ff-a664-33d2144a0e8d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585170769752</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added Internacionalization project">
+      <created>1585171456593</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585171456593</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -104,7 +105,8 @@
     <MESSAGE value="Delete some projects" />
     <MESSAGE value="Added LifeCycle project" />
     <MESSAGE value="Added OnClick-Event project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added OnClick-Event project" />
+    <MESSAGE value="Added Internacionalization project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Internacionalization project" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
