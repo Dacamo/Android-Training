@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">ParqueaderoUco</string>
+    <string name="bienvenido">Bienvenido (a) escoja una opción</string>
+    <string name="configurar_tarifa">Configurarción de tarifas</string>
+    <string name="listado_tarifas">Listado de tarifas</string>
+    <string name="guardar">Guardar</string>
+    <string name="digite_valor_tarifa">Digite un valor de tarifa</string>
+    <string name="digite_nombre_tarifa">Digite nombre tarifa</string>
+    <string name="registro_tarifa">Registrar tarifa</string>
+    <string name="menu_principal">Menu Principal</string>
+    <string name="sin_tarifas">No hay tarifas registradas</string>
+    <string name="tarifas">Tarifas</string>
+    <string name="requerido">El valor es requerido</string>
+    <string name="successfully">Se ha creado correctamente</string>
 </resources>
