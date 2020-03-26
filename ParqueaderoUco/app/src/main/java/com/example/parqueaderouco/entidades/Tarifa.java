@@ -3,9 +3,7 @@ package com.example.parqueaderouco.entidades;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
 import com.example.parqueaderouco.persistencia.Tabla;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
