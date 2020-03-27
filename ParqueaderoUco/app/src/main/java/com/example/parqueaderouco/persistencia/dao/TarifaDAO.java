@@ -3,6 +3,8 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
+
 import com.example.parqueaderouco.entidades.Tarifa;
 import java.util.List;
 
@@ -10,6 +12,9 @@ import java.util.List;
 public interface TarifaDAO {
     @Insert
     void insert(Tarifa tarifa);
+
+    @Update
+    void update(Tarifa tarifa);
 
     @Delete
     void delete(Tarifa tarifa);
@@ -19,4 +24,8 @@ public interface TarifaDAO {
 
     @Query("SELECT * FROM tarifa")
     List<Tarifa> listar();
+
+    @Query("SELECT * FROM tarifa WHERE idTarifa=:idTarifa")
+    Tarifa getByIdTarifa(Integer idTarifa);
+
 }

@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Activity Life Cycle.iml" filepath="$PROJECT_DIR$/Activity Life Cycle.iml" group="Activity Life Cycle" />
+      <module fileurl="file://$PROJECT_DIR$/ActivityLifeCycle-Activity Life Cycle.iml" filepath="$PROJECT_DIR$/ActivityLifeCycle-Activity Life Cycle.iml" group="Activity Life Cycle" />
+      <module fileurl="file://$PROJECT_DIR$/app/ActivityLifeCycle-app.iml" filepath="$PROJECT_DIR$/app/ActivityLifeCycle-app.iml" group="Activity Life Cycle/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Activity Life Cycle/app" />
     </modules>
   </component>

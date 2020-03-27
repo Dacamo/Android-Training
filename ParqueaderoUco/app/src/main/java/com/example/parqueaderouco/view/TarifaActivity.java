@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -61,6 +62,22 @@ public class TarifaActivity extends AppCompatActivity {
         db = DataBaseHelper.getDBMainThread(this);
         actionBarUtil = new ActionBarUtil(this);
         actionBarUtil.setToolBar(getString(R.string.tarifas));
+        onItemClickListener();
+    }
+
+    private void onItemClickListener() {
+        listViewTarifas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), ActualizacionTarifaActivity.class);
+                intent.putExtra("Id", getTarifaId(position));
+                startActivity(intent);
+            }
+
+            private String getTarifaId(int position) {
+                return String.valueOf(listaTarifas.get(position).getIdTarifa());
+            }
+        });
     }
 
     @Override
