@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Cetus</string>
+    <string name="Ingresar">Ingresar</string>
+    <string name="Registro">Registro</string>
+    <string name="Ingrese_Correo">Correo Electrónico</string>
+    <string name="Ingrese_contrasena">Contraseña</string>
 </resources>

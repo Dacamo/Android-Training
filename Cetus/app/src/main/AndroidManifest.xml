@@ -15,7 +15,8 @@
         <activity android:name=".views.RegisterEventActivity" />
         <activity android:name=".views.EventsActivity" />
         <activity android:name=".views.UserProfileActivity" />
-        <activity android:name=".views.MainActivity">
+        <activity android:name=".views.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
