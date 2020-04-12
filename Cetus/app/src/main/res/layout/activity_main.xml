@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/nombre" />
+        app:srcCompat="@drawable/login" />
 
     <EditText
         android:id="@+id/txtEmail"
@@ -37,12 +37,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49" />
+        app:layout_constraintVertical_bias="0.45999998" />
 
     <EditText
         android:id="@+id/txtPass"
         android:layout_width="314dp"
         android:layout_height="45dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:hint="@string/Ingrese_contrasena"
@@ -51,35 +52,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <Button
         android:id="@+id/button2"
         android:layout_width="290dp"
         android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:onClick="goToRegisterUserActivity"
         android:text="@string/Registro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegistar"
-        app:layout_constraintVertical_bias="0.153"
 
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnRegistar"
         android:layout_width="290dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="112dp"
+        android:onClick="goToUserProfileActivity"
         android:text="@string/Ingresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPass"
-        app:layout_constraintVertical_bias="0.543" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
