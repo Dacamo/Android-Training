@@ -4,4 +4,13 @@
     <string name="Registro">Registro</string>
     <string name="Ingrese_Correo">Correo electrónico</string>
     <string name="Ingrese_contrasena">Contraseña</string>
+    <string name="Perfil_usuario">Perfil de Usuario</string>
+    <string name="Ingrese_nombre">Ingrese el nombre</string>
+    <string name="Ingrese_email">Ingrese el correo</string>
+    <string name="Ingrese_telefono">Ingrese número del móvil</string>
+    <string name="Registrar">Registrar</string>
+    <string name="Bienvenida">Bienvenido</string>
+    <string name="Eventos">Gestionar eventos</string>
+    <string name="Actualizar">Actualizar Datos</string>
+    <string name="Salir">Cerrar Sesion</string>
 </resources>
