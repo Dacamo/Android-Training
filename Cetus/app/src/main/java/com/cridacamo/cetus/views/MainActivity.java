@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.cridacamo.cetus.R;
+import com.cridacamo.cetus.utilities.ActionBarUtil;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,4 +28,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RegisterUserActivity.class);
         startActivity(intent);
     }
+
 }

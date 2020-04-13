@@ -9,13 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.RegisterAssistantActivity"></activity>
+        <activity android:name=".views.UpdateUserActivity"></activity>
+        <activity android:name=".views.RegisterAssistantActivity" />
         <activity android:name=".views.AssistantsActivity" />
         <activity android:name=".views.RegisterUserActivity" />
         <activity android:name=".views.RegisterEventActivity" />
         <activity android:name=".views.EventsActivity" />
         <activity android:name=".views.UserProfileActivity" />
-        <activity android:name=".views.MainActivity"
+        <activity
+            android:name=".views.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

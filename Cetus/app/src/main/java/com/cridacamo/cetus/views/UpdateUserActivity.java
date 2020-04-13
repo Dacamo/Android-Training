@@ -9,24 +9,19 @@ import android.view.View;
 import com.cridacamo.cetus.R;
 import com.cridacamo.cetus.utilities.ActionBarUtil;
 
-public class RegisterUserActivity extends AppCompatActivity {
+public class UpdateUserActivity extends AppCompatActivity {
 
     private ActionBarUtil actionBarUtil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_user);
+        setContentView(R.layout.activity_update_user);
         initComponents();
     }
 
     private void initComponents() {
         actionBarUtil = new ActionBarUtil(this);
-        actionBarUtil.setToolBar(getString(R.string.RegisterUser));
-    }
-
-    public void goToProfileActivity(View view) {
-        Intent intent = new Intent(this, UserProfileActivity.class);
-        startActivity(intent);
+        actionBarUtil.setToolBar(getString(R.string.UpdateProfile));
     }
 
     @Override
@@ -35,4 +30,8 @@ public class RegisterUserActivity extends AppCompatActivity {
         return true;
     }
 
+    public void goToProfileActivity(View view) {
+        Intent intent = new Intent(this, UserProfileActivity.class);
+        startActivity(intent);
+    }
 }

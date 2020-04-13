@@ -12,18 +12,20 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.cridacamo.cetus.R;
+import com.cridacamo.cetus.utilities.ActionBarUtil;
 
 public class EventsActivity extends AppCompatActivity {
 
     MutableLiveData<String> mutableLiveDataEvents;
     String[] events = new String[30];
     private ListView listViewEvents;
+    private ActionBarUtil actionBarUtil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
-        intitComponents();
+        initComponents();
         loadInfo();
         onItemClickListener();
     }
@@ -32,7 +34,10 @@ public class EventsActivity extends AppCompatActivity {
         listViewEvents.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), getEventName(position),Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getApplicationContext(), AssistantsActivity.class);
+                intent.putExtra("name", getEventName(position));
+                startActivity(intent);
             }
         });
     }
@@ -48,12 +53,19 @@ public class EventsActivity extends AppCompatActivity {
         listViewEvents.setAdapter(arrayAdapter);
     }
 
-    private void intitComponents() {
-        listViewEvents = findViewById(R.id.listViewEvents);
+    private void initComponents() {
+        actionBarUtil = new ActionBarUtil(this);
+        actionBarUtil.setToolBar(getString(R.string.EventsActivity));
+        listViewEvents = findViewById(R.id.listViewAssistants);
     }
 
     public void goToRegisterEventActivity(View view) {
         Intent intent = new Intent(this, RegisterEventActivity.class);
         startActivity(intent);
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

@@ -21,12 +21,12 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/listViewEvents"
-        android:layout_width="282dp"
-        android:layout_height="656dp"
-        android:layout_marginStart="16dp"
+        android:id="@+id/listViewAssistants"
+        android:layout_width="372dp"
+        android:layout_height="912dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,8 +44,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/listViewEvents"
-        app:layout_constraintTop_toTopOf="@+id/listViewEvents"
+        app:layout_constraintStart_toStartOf="@+id/listViewAssistants"
+        app:layout_constraintTop_toTopOf="@+id/listViewAssistants"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@drawable/mas" />
 </androidx.constraintlayout.widget.ConstraintLayout>

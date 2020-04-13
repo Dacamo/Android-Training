@@ -14,7 +14,7 @@
         android:layout_marginStart="147dp"
         android:layout_marginTop="113dp"
         android:layout_marginEnd="264dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtEmail"
+        app:layout_constraintBottom_toTopOf="@+id/txtDocumentNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         app:srcCompat="@drawable/login" />
 
     <EditText
-        android:id="@+id/txtEmail"
+        android:id="@+id/txtDocumentNumber"
         android:layout_width="314dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.45999998" />
 
     <EditText
-        android:id="@+id/txtPass"
+        android:id="@+id/txtName"
         android:layout_width="314dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
@@ -51,7 +51,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtDocumentNumber"
         app:layout_constraintVertical_bias="0.0" />
 
 
@@ -66,7 +66,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegistar"
-
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -77,11 +76,12 @@
         android:layout_marginBottom="112dp"
         android:onClick="goToUserProfileActivity"
         android:text="@string/Ingresar"
+        android:textColor="@color/primary_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPass"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
         app:layout_constraintVertical_bias="0.0" />
 
 

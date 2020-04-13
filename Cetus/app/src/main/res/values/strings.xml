@@ -13,4 +13,18 @@
     <string name="Eventos">Gestionar eventos</string>
     <string name="Actualizar">Actualizar Datos</string>
     <string name="Salir">Cerrar Sesion</string>
+    <string name="RegisterUser">Registro</string>
+    <string name="UserProfile">Perfil</string>
+    <string name="AssistantsActivity">Asistentes</string>
+    <string name="EventsActivity">Eventos</string>
+    <string name="RegisterAssistant">Registro de asistente</string>
+    <string name="RegisterEvent">Registro de eventos</string>
+    <string name="UpdateProfile">Actualizar Información</string>
+    <string name="ActualizarInformacion">Actualizar</string>
+    <string name="CrearEvento">Crear nuevo evento</string>
+    <string name="Ingrese_fecha">Ingrese la fecha</string>
+    <string name="Ingrese_ubicacion">Ingrese la ubicación</string>
+    <string name="AddEvent">Crear Evento</string>
+    <string name="Asistentes">Gestionar Asistentes</string>
+    <string name="scan">Escanear Documento</string>
 </resources>
