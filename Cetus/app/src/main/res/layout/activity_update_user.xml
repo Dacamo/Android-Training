@@ -32,14 +32,27 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/updateuser" />
 
-    <EditText
-        android:id="@+id/txtDocumentType"
+    <Button
+        android:id="@+id/btnAddEvent"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:onClick="goToProfileActivity"
+        android:text="@string/ActualizarInformacion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_user_txt_phone" />
+
+    <EditText
+        android:id="@+id/update_user_txt_name"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:ems="10"
-        android:hint="@string/Ingrese_nombre"
         android:inputType="textPersonName"
+        android:hint="@string/Ingrese_nombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,59 +60,45 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/txtDocumentNumber"
-        android:layout_width="wrap_content"
+        android:id="@+id/update_user_txt_email"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:inputType="textPersonName"
         android:hint="@string/Ingrese_Correo"
-        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDocumentType"
+        app:layout_constraintTop_toBottomOf="@+id/update_user_txt_name"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/txtName"
-        android:layout_width="wrap_content"
+        android:id="@+id/update_user_txt_pass"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:inputType="textPersonName"
         android:hint="@string/Ingrese_contrasena"
-        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDocumentNumber"
+        app:layout_constraintTop_toBottomOf="@+id/update_user_txt_email"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/txtPhone"
-        android:layout_width="wrap_content"
+        android:id="@+id/update_user_txt_phone"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:inputType="textPersonName"
         android:hint="@string/Ingrese_telefono"
-        android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtName"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btnAddEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/ActualizarInformacion"
-        android:onClick="goToProfileActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPhone"
+        app:layout_constraintTop_toBottomOf="@+id/update_user_txt_pass"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

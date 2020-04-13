@@ -27,4 +27,7 @@
     <string name="AddEvent">Crear Evento</string>
     <string name="Asistentes">Gestionar Asistentes</string>
     <string name="scan">Escanear Documento</string>
+    <string name="IngreseTipoDocumento">Ingrese tipo documento</string>
+    <string name="IngreseNumeroDocumento">Ingrese número Documento</string>
+    <string name="IngreseLocalizacion">Ingrese ubicación</string>
 </resources>
