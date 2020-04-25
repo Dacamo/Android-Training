@@ -15,5 +15,14 @@
     <string name="updateSuccess">Se ha actualizado correctamente</string>
     <string name="actualizar_tarifa">Actualizar Tarifa</string>
     <string name="actualizar">Actualizar</string>
+    <string name="registrar_Ingreso">Registrar Ingreso</string>
+    <string name="registrar_salida">Registrar Salida</string>
+    <string name="ingrese_placa">Digite la placa</string>
+    <string name="total_Pagar">Total a pagar</string>
+    <string name="cantidad_horas">Cantidad Horas</string>
+    <string name="registrar_ingreso_salida">Registrar Ingresos y salidas</string>
+    <string name="buscar">Buscar</string>
+    <string name="debe_seleccionar_tarifa">Debe seleccionar una tarifa</string>
+    <string name="operacion_exitosa">La información se ha guardado exitosamente</string>
 
 </resources>
