@@ -12,7 +12,7 @@
     <string name="tarifas">Tarifas</string>
     <string name="requerido">El valor es requerido</string>
     <string name="successfully">Se ha creado correctamente</string>
-    <string name="updateSuccess">Se ha actualizado correctamente</string>
+    <string name="updateSuccess">Se ha registrado la salida correctamente</string>
     <string name="actualizar_tarifa">Actualizar Tarifa</string>
     <string name="actualizar">Actualizar</string>
     <string name="registrar_Ingreso">Registrar Ingreso</string>
@@ -24,5 +24,8 @@
     <string name="buscar">Buscar</string>
     <string name="debe_seleccionar_tarifa">Debe seleccionar una tarifa</string>
     <string name="operacion_exitosa">La información se ha guardado exitosamente</string>
+    <string name="sin_movimientos">No hay movimientos</string>
+    <string name="ConfiguracionMovimientos">Configuración de Movimientos</string>
+    <string name="Movimientos">Movimientos</string>
 
 </resources>

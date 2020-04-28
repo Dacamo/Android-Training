@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.parqueaderouco.R;
@@ -20,6 +21,7 @@ import com.example.parqueaderouco.persistencia.room.DataBaseHelper;
 import com.example.parqueaderouco.utilities.ActionBarUtil;
 import com.example.parqueaderouco.utilities.DateUtil;
 
+import java.text.ParseException;
 import java.time.ZoneOffset;
 import java.util.Date;
 import java.util.List;
@@ -41,10 +43,15 @@ public class MovimientoActivity extends AppCompatActivity {
     public Button btnSalida;
     @BindView(R.id.layoutDatos)
     public ConstraintLayout layoutDatos;
+    @BindView(R.id.txtCantidadHoras)
+    public TextView txtCantidadHoras;
+    @BindView(R.id.txtTotal)
+    public TextView txtTotal;
     private List<Tarifa> tarifas;
     private Movimiento movimiento;
     private Tarifa tarifa;
     private String[] arrayTarifas;
+    private String valorTotal;
 
 
     @Override
@@ -106,13 +113,25 @@ public class MovimientoActivity extends AppCompatActivity {
         return true;
     }
 
-    public void buscarPlaca(View view) {
-        movimiento =  db.getMovimientoDAO().findByPlaca(txtPlaca.getText().toString());
+    public void buscarPlaca(View view) throws ParseException {
+        hideComponents();
+        movimiento =  db.getMovimientoDAO().findByPlaca(txtPlaca.getText().toString().toUpperCase());
        if(movimiento == null){
            ShowComponentesIngreso();
        }else {
            ShowComponentesSalida();
+           CalculatePrice();
        }
+    }
+
+    private void CalculatePrice() throws ParseException {
+        String fechaEntrada = movimiento.getFechaEntrada();
+        String fechaSalida = DateUtil.DateToStringWithHour(new Date());
+        int totalHoras = DateUtil.timeFromDates(fechaEntrada, fechaSalida);
+        txtCantidadHoras.setText(Integer.toString(totalHoras) + " Hora(s)");
+        Tarifa tarifaExistente = db.getTarifaDAO().getByIdTarifa(movimiento.getIdTarifa());
+        valorTotal = String.valueOf(tarifaExistente.getPrecio()* totalHoras);
+        txtTotal.setText(valorTotal);
     }
 
     private void ShowComponentesSalida() {
@@ -130,13 +149,24 @@ public class MovimientoActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), R.string.debe_seleccionar_tarifa, Toast.LENGTH_SHORT).show();
         }else if(movimiento == null){
             movimiento = new Movimiento();
-            movimiento.setPlaca(txtPlaca.getText().toString());
+            movimiento.setPlaca(txtPlaca.getText().toString().toUpperCase());
             movimiento.setIdTarifa(tarifa.getIdTarifa());
-            movimiento.setFechaEntrada(DateUtil.convertDateTOStringNotHour(new Date()));
+            movimiento.setFechaEntrada(DateUtil.DateToStringWithHour(new Date()));
             new InsercionMovimiento().execute(movimiento);
             movimiento = null;
             hideComponents();
         }
+    }
+
+    public void registrarSalida(View view)  {
+        Movimiento movimientoExistente = db.getMovimientoDAO().findByPlaca(txtPlaca.getText().toString().toUpperCase());
+        movimientoExistente.setFechaSalida(DateUtil.DateToStringWithHour(new Date()));
+        movimientoExistente.setFinalizaMovimiento(true);
+        movimientoExistente.setValorTotal(valorTotal);
+        new ActualizarMovimiento().execute(movimientoExistente);
+        movimientoExistente = null;
+        valorTotal = "";
+        hideComponents();
     }
 
     private class InsercionMovimiento extends AsyncTask<Movimiento, Void, Void>{
@@ -151,6 +181,22 @@ public class MovimientoActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             Toast.makeText(getApplicationContext(), R.string.operacion_exitosa, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    private class ActualizarMovimiento extends AsyncTask<Movimiento, Void, Void>
+    {
+        @Override
+        protected Void doInBackground(Movimiento... movimientos) {
+            DataBaseHelper.getSimpleDB(getApplicationContext()).getMovimientoDAO().update(movimientos[0]);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            Toast.makeText(getApplicationContext(), getString(R.string.updateSuccess), Toast.LENGTH_LONG).show();
+            super.onPostExecute(aVoid);
         }
     }
 }

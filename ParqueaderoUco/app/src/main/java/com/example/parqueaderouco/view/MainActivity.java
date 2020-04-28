@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.parqueaderouco.R;
 import com.example.parqueaderouco.utilities.ActionBarUtil;
 import com.example.parqueaderouco.view.movimiento.MovimientoActivity;
+import com.example.parqueaderouco.view.movimiento.MovimientosActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToIngresoSalida(View view) {
         Intent intent = new Intent(this, MovimientoActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToMovimientosActivity(View view) {
+        Intent intent = new Intent(this, MovimientosActivity.class);
         startActivity(intent);
     }
 }
