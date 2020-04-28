@@ -14,6 +14,14 @@ public class DateUtil {
     public static String DATE_FORMAT_HORA = "yyyy-MM-dd HH:mm:ss";
     static  String DATE_FORMAT = "yyyy-MM-dd";
 
+    public static String DateToStringWithHour (Date date)
+    {
+        DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT_HORA);
+        String strDate = dateFormat.format(date);
+        return strDate;
+
+    }
+
     public static Date convertStringToDate (String stringDate)
     {
         Date date = null;
@@ -26,17 +34,17 @@ public class DateUtil {
         return date;
     }
 
-    public static String convertDateTOStringNotHour (Date date){
+    public static String convertDateToStringNotHour (Date date){
         SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT, Locale.ENGLISH);
         return dateFormat.format(date);
     }
 
-    public static String timeFromDates (String fechaInicialString, String fechaFinalString) throws ParseException{
+    public static int timeFromDates (String fechaInicialString, String fechaFinalString) throws ParseException{
         SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT_HORA, Locale.ENGLISH);
         Date fechaInicial = dateFormat.parse(fechaInicialString);
         Date fechaFinal = dateFormat.parse(fechaFinalString);
 
-        int diferencia = (int)((fechaFinal.getTime() - fechaFinal.getTime()) / 1000);
+        int diferencia = (int)((fechaFinal.getTime() - fechaInicial.getTime()) / 1000);
         int dias = 0;
         int horas = 0;
         int minutos = 0;
@@ -47,14 +55,23 @@ public class DateUtil {
         }
         if( diferencia>3600){
             horas = (int) Math.floor(diferencia/3600);
-            diferencia = diferencia - (minutos * 3600);
+            diferencia = diferencia - (horas * 3600);
         }
         if( diferencia>60){
             minutos = (int) Math.floor(diferencia/60);
             diferencia = diferencia - (minutos * 60);
         }
 
-        return (dias + "dias, " + horas + "horas, " + minutos + "minutos y " + diferencia + "segundos");
+        int totalHoras = 0;
+        if(minutos>0){
+            totalHoras++;
+        }
+        if(dias >0) {
+            totalHoras = totalHoras + 24;
+        }
+
+        return (totalHoras + horas);
+
     }
 
     public static String getCurrentDate(){

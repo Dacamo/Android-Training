@@ -27,5 +27,7 @@ public class Movimiento {
     private String fechaSalida;
     @ColumnInfo(name = "finalizaMovimiento")
     private boolean finalizaMovimiento;
+    @ColumnInfo(name = "valorTotal")
+    private String valorTotal;
 
 }
