@@ -3,8 +3,12 @@ package com.example.parqueaderouco.persistencia.dao;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import com.example.parqueaderouco.entidades.Movimiento;
+import com.example.parqueaderouco.entidades.Tarifa;
+
+import java.util.List;
 
 @Dao
 public interface MovimientoDAO {
@@ -14,4 +18,10 @@ public interface MovimientoDAO {
 
     @Insert
     void insert(Movimiento movimiento);
+
+    @Update
+    void update(Movimiento movimiento);
+
+    @Query("SELECT * FROM movimiento ORDER BY fechaEntrada ASC")
+    List<Movimiento> listar();
 }

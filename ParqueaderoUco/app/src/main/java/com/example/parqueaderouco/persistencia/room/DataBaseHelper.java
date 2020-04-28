@@ -15,7 +15,7 @@ import com.example.parqueaderouco.persistencia.dao.TarifaDAO;
 
 public abstract class DataBaseHelper extends RoomDatabase {
 
-    public static final int VERSION_BASE_DATOS = 2;
+    public static final int VERSION_BASE_DATOS = 5;
     public static final String NOMBRE_BASE_DATOS = "parqueadero";
     private static DataBaseHelper instace;
 
