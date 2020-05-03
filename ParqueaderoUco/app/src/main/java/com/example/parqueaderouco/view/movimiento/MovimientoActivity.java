@@ -127,7 +127,9 @@ public class MovimientoActivity extends AppCompatActivity {
     private void CalculatePrice() throws ParseException {
         String fechaEntrada = movimiento.getFechaEntrada();
         String fechaSalida = DateUtil.DateToStringWithHour(new Date());
-        int totalHoras = DateUtil.timeFromDates(fechaEntrada, fechaSalida);
+        movimiento.setFechaSalida(fechaSalida);
+
+        int totalHoras = movimiento.horasTranscurridas();
         txtCantidadHoras.setText(Integer.toString(totalHoras) + " Hora(s)");
         Tarifa tarifaExistente = db.getTarifaDAO().getByIdTarifa(movimiento.getIdTarifa());
         valorTotal = String.valueOf(tarifaExistente.getPrecio()* totalHoras);
