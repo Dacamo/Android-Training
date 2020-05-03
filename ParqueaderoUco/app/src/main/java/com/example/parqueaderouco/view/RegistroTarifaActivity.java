@@ -49,7 +49,7 @@ public class RegistroTarifaActivity extends AppCompatActivity {
             new InsercionTarifa().execute(tarifa);
             finish();
         }
-        }
+    }
 
 
     private Tarifa getTarifa(String nombreTarifa, Double valorTarifa) {

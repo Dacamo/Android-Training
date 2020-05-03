@@ -63,6 +63,11 @@ public class DateUtil {
         }
 
         int totalHoras = 0;
+
+        if (diferencia > 0) {
+            totalHoras++;
+        }
+
         if(minutos>0){
             totalHoras++;
         }
@@ -71,12 +76,5 @@ public class DateUtil {
         }
 
         return (totalHoras + horas);
-
-    }
-
-    public static String getCurrentDate(){
-        SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT_HORA, Locale.ENGLISH);
-        Date date = new Date();
-        return dateFormat.format(date);
     }
 }
