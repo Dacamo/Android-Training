@@ -27,5 +27,7 @@
     <string name="sin_movimientos">No hay movimientos</string>
     <string name="ConfiguracionMovimientos">Configuración de Movimientos</string>
     <string name="Movimientos">Movimientos</string>
+    <string name="fechaInicial">Seleccione fecha inicial</string>
+    <string name="fechaFinal">Seleccione fecha final</string>
 
 </resources>

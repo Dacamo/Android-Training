@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/lbPlaca"
-            android:layout_width="180dp"
+            android:layout_width="0dp"
             android:layout_height="51dp"
             android:layout_marginStart="8dp"
             android:text="PLD77D"
