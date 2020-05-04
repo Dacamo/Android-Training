@@ -38,6 +38,7 @@ public class MovimientosActivity extends AppCompatActivity {
     public List<Movimiento> listaMovimientos;
     DataBaseHelper db;
     private MovimientoAdapter movimientoAdapter;
+    private ActionBarUtil actionBarUtil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,19 +46,27 @@ public class MovimientosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movimientos);
         ButterKnife.bind(this);
         initComponents();
-        //loadTarifas();
     }
 
     private void initComponents() {
+        actionBarUtil = new ActionBarUtil(this);
+        actionBarUtil.setToolBar(getString(R.string.tarifas));
         db = DataBaseHelper.getDBMainThread(this);
         onItemClickListener();
-    }
 
-    private void loadTarifas() {
-        listaMovimientos = db.getMovimientoDAO().listar();
-        movimientoAdapter = new MovimientoAdapter(this, listaMovimientos);
-        listViewMovimientos.setAdapter(movimientoAdapter);
+        txtFechaInicial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog(txtFechaInicial);
+            }
+        });
 
+        txtFechaFinal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog(txtFechaFinal);
+            }
+        });
     }
 
 
@@ -88,22 +97,11 @@ public class MovimientosActivity extends AppCompatActivity {
         }
     }
 
-    public void showDatePickerDialog(View v) {
+    public void showDatePickerDialog(final EditText editText) {
         DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                txtFechaInicial.setText(year + "-" + twoDigits(month+1) + "-" + twoDigits(day));
-            }
-        });
-
-        newFragment.show(getSupportFragmentManager(), "datePicker");
-    }
-
-    public void showDatePickerDialog2(View v) {
-        DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                txtFechaFinal.setText(year + "-" + twoDigits(month+1) + "-" + twoDigits(day));
+                editText.setText(year + "-" + twoDigits(month+1) + "-" + twoDigits(day));
             }
         });
 
