@@ -3,24 +3,21 @@ package com.example.parqueaderouco.view.movimiento;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import com.example.parqueaderouco.R;
 import com.example.parqueaderouco.adapter.MovimientoAdapter;
 import com.example.parqueaderouco.entidades.Movimiento;
-import com.example.parqueaderouco.entidades.Tarifa;
 import com.example.parqueaderouco.persistencia.room.DataBaseHelper;
 import com.example.parqueaderouco.utilities.ActionBarUtil;
 import com.example.parqueaderouco.utilities.DatePickerFragment;
-import com.example.parqueaderouco.view.ActualizacionTarifaActivity;
+
 
 import java.util.List;
 
@@ -50,7 +47,7 @@ public class MovimientosActivity extends AppCompatActivity {
 
     private void initComponents() {
         actionBarUtil = new ActionBarUtil(this);
-        actionBarUtil.setToolBar(getString(R.string.tarifas));
+        actionBarUtil.setToolBar(getString(R.string.movimientos));
         db = DataBaseHelper.getDBMainThread(this);
         onItemClickListener();
 

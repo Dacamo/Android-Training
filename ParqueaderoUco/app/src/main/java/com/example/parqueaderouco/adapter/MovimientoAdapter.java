@@ -102,14 +102,15 @@ public class MovimientoAdapter  extends BaseAdapter implements Filterable {
             convertView.setTag(holder);
         }
 
+
         holder.placa.setText(listaMovimientosOut.get(position).getPlaca());
         holder.fechaIngreso.setText(listaMovimientosOut.get(position).getFechaEntrada());
         holder.fechaSalida.setText(listaMovimientosOut.get(position).getFechaSalida());
         holder.valorTotal.setText(listaMovimientosOut.get(position).getValorTotal());
-        if(listaMovimientosOut.get(position).getFechaSalida() == null){
+        if(!listaMovimientosOut.get(position).isFinalizaMovimiento()){
             holder.placa.setTextColor(Color.RED);
+            holder.fechaSalida.setText("Vehículo sin salir del parqueadero");
         }
-
 
         return convertView;
     }
