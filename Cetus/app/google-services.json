@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "202945556453",
+    "firebase_url": "https://cetusapp-3aa39.firebaseio.com",
+    "project_id": "cetusapp-3aa39",
+    "storage_bucket": "cetusapp-3aa39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202945556453:android:ac383e72b8c2564c5e890c",
+        "android_client_info": {
+          "package_name": "com.cridacamo.cetus.views"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202945556453-cqu53rhje205nst4tqubtqc726u8su7a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cridacamo.cetus.views",
+            "certificate_hash": "2fe38381cec58fea771b6f0dd14fa1ff3e9e5d35"
+          }
+        },
+        {
+          "client_id": "202945556453-vk71p8v33iersh7ieskfk7eg02e40hqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlYBQqb_VPElA2ydoJWsCFtUv8VBMCTOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202945556453-vk71p8v33iersh7ieskfk7eg02e40hqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

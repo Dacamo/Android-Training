@@ -30,4 +30,5 @@
     <string name="IngreseTipoDocumento">Ingrese tipo documento</string>
     <string name="IngreseNumeroDocumento">Ingrese número Documento</string>
     <string name="IngreseLocalizacion">Ingrese ubicación</string>
+    <string name="requerido">Valor Requerido</string>
 </resources>
