@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:202945556453:android:ac383e72b8c2564c5e890c",
         "android_client_info": {
-          "package_name": "com.cridacamo.cetus.views"
+          "package_name": "com.cridacamo.cetus"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "202945556453-cqu53rhje205nst4tqubtqc726u8su7a.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.cridacamo.cetus.views",
+            "package_name": "com.cridacamo.cetus",
             "certificate_hash": "2fe38381cec58fea771b6f0dd14fa1ff3e9e5d35"
           }
         },

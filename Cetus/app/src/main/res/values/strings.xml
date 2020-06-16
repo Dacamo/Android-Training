@@ -31,4 +31,9 @@
     <string name="IngreseNumeroDocumento">Ingrese número Documento</string>
     <string name="IngreseLocalizacion">Ingrese ubicación</string>
     <string name="requerido">Valor Requerido</string>
+    <string name="emailInUse">Correo en uso</string>
+    <string name="successfully">Registro Exitoso</string>
+    <string name="failed">Error inicio de sesion</string>
+    <string name="problem">Problema en el registro</string>
+    <string name="serverError">Error Servidor</string>
 </resources>

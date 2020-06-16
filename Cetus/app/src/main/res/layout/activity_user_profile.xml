@@ -23,12 +23,12 @@
         app:layout_constraintVertical_bias="0.037" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/profile_txtviewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Cristian Castro"
         android:textSize="25dp"
+        android:text="example"
         android:textColor="@color/primary_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/profile_txtviewName"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/user_profile" />
 
@@ -75,11 +75,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewEmail"
+        app:layout_constraintTop_toBottomOf="@+id/profile_txtViewEmail"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txtViewEmail"
+        android:id="@+id/profile_txtViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
