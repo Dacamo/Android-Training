@@ -53,6 +53,6 @@ public class Assistant {
 
     @Override
     public String toString() {
-        return name;
+        return name + " -> " + document;
     }
 }

@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.cridacamo.cetus.Adapter.EventAdapter;
 import com.cridacamo.cetus.R;
 import com.cridacamo.cetus.models.Event;
 import com.cridacamo.cetus.utilities.ActionBarUtil;
@@ -38,6 +39,7 @@ public class EventsActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     private FirebaseAuth mAuth;
+    private EventAdapter eventAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +61,11 @@ public class EventsActivity extends AppCompatActivity {
                     Event event = objSnapshot.getValue(Event.class);
                     eventsList.add(event);
 
-                    eventArrayAdapter = new ArrayAdapter<Event>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, eventsList);
-                    listViewEvents.setAdapter(eventArrayAdapter);
+                    //eventArrayAdapter = new ArrayAdapter<Event>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, eventsList);
+                    //listViewEvents.setAdapter(eventArrayAdapter);
                 }
+                eventAdapter = new EventAdapter(getApplicationContext(),eventsList);
+                listViewEvents.setAdapter(eventAdapter);
             }
 
             @Override
@@ -91,6 +95,12 @@ public class EventsActivity extends AppCompatActivity {
             }
         });
     }
+
+    private String getEventName(int position) {
+        Event e =  eventsList.get(position);
+        return e.getName();
+    }
+
     private String getEventUid(int position) {
         Event e = eventsList.get(position);
         return e.getUid();

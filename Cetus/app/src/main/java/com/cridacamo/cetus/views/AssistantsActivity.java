@@ -11,7 +11,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.cridacamo.cetus.Adapter.EventAdapter;
 import com.cridacamo.cetus.R;
 import com.cridacamo.cetus.models.Assistant;
 import com.cridacamo.cetus.models.Event;
@@ -90,9 +92,17 @@ public class AssistantsActivity extends AppCompatActivity {
         listViewAssistants.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                databaseReference.child("assistants").child(getAssistantUid(position)).removeValue();
+                Toast.makeText(getApplicationContext(), "Se ha eliminado el asistente", Toast.LENGTH_SHORT).show();
             }
         });
     }
+
+    private String getAssistantUid(int position) {
+        Assistant a = assistantList.get(position);
+        return a.getUid();
+    }
+
 
     private void initComponents() {
         actionBarUtil = new ActionBarUtil(this);
@@ -100,8 +110,8 @@ public class AssistantsActivity extends AppCompatActivity {
         listViewAssistants = findViewById(R.id.listViewAssistants);
         eventUid = getIntent().getStringExtra("EVENT_UID");
         txtEventName.setText(eventUid);
-    }
 
+    }
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

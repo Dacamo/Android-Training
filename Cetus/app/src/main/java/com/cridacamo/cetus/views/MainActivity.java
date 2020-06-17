@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         loadingDialog = new LoadingDialog(this);
         mAuth = FirebaseAuth.getInstance();
         bbdd = FirebaseDatabase.getInstance().getReference("users");
-
     }
 
     public void goToUserProfileActivity(View view) {
@@ -86,16 +85,14 @@ public class MainActivity extends AppCompatActivity {
 
                                     @Override
                                     public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        loadingDialog.dissmissDialog();
                                         Toast.makeText(getApplicationContext(), getString(R.string.serverError),
                                                 Toast.LENGTH_SHORT).show();
                                     }
                                 });
 
-
-
-
-
                             } else {
+                                loadingDialog.dissmissDialog();
                                 // If sign in fails, display a message to the user.
                                 Toast.makeText(getApplicationContext(), getString(R.string.failed),
                                         Toast.LENGTH_SHORT).show();
