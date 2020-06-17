@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.cridacamo.cetus.R;
 import com.cridacamo.cetus.models.User;
 import com.cridacamo.cetus.utilities.ActionBarUtil;
+import com.cridacamo.cetus.utilities.LoadingDialog;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -36,31 +37,36 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.main_txt_email)
     public EditText txtEmail;
 
+
     private FirebaseAuth mAuth;
     DatabaseReference bbdd;
-
+    private LoadingDialog loadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        loadingDialog = new LoadingDialog(this);
         mAuth = FirebaseAuth.getInstance();
         bbdd = FirebaseDatabase.getInstance().getReference("users");
+
     }
 
     public void goToUserProfileActivity(View view) {
+
         String pass = txtPass.getText().toString();
         String email = txtEmail.getText().toString();
 
         if(ValidateModel(pass, email)){
-
             //SIGN IN
+            loadingDialog.startLoadingDialog();
             mAuth.signInWithEmailAndPassword(email, pass)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+
                                 // Sign in success, update UI with the signed-in user's information
                                 FirebaseUser usuario = mAuth.getCurrentUser();
                                 Query q = bbdd.orderByChild("email").equalTo(usuario.getEmail()).limitToFirst(1);
@@ -73,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                                             intent.putExtra("name", existingUser.getName());
                                             intent.putExtra("email", existingUser.getEmail());
                                             intent.putExtra("phone", existingUser.getPhoneNumber());
+                                            loadingDialog.dissmissDialog();
                                             startActivity(intent);
                                         }
                                     }

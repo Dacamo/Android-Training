@@ -105,15 +105,15 @@
         android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/Ingrese_telefono"
+        android:inputType="phone"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_user_txt_pass"
-        app:layout_constraintVertical_bias="0.0"
-        android:backgroundTint="@color/colorAccent"
-        android:textColorHint="@color/secondary_text"
-        android:textColor="@color/primary_text"/>
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

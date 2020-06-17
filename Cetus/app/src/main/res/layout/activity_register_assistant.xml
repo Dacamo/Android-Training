@@ -90,7 +90,7 @@
         android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:hint="@string/IngreseNumeroDocumento"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="@color/primary_text"
         android:textColorHint="@color/secondary_text"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -128,7 +128,6 @@ public class RegisterAssistantActivity extends AppCompatActivity {
     private void RemoveAllFields() {
         txtNumber.setText("");
         txtName.setText("");
-
     }
 
     private boolean validateModel(String name, String document, String eventUid, String documentType) {
