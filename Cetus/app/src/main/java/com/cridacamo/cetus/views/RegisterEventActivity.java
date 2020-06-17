@@ -95,9 +95,10 @@ public class RegisterEventActivity extends AppCompatActivity {
             databaseReference.child("events").child(event.getUid()).setValue(event);
             RemoveAllFields();
             Toast.makeText(this, getString(R.string.successfully), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, EventsActivity.class);
+            startActivity(intent);
         }
-        Intent intent = new Intent(this, EventsActivity.class);
-        startActivity(intent);
+
     }
 
     private void RemoveAllFields() {

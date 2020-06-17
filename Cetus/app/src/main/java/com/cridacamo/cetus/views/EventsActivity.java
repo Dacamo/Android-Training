@@ -86,19 +86,15 @@ public class EventsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent intent = new Intent(getApplicationContext(), AssistantsActivity.class);
-                intent.putExtra("name", getEventName(position));
+                intent.putExtra("EVENT_UID", getEventUid(position));
                 startActivity(intent);
             }
         });
     }
-    private String getEventName(int position) {
+    private String getEventUid(int position) {
         Event e = eventsList.get(position);
-        Toast.makeText(getApplicationContext(),e.getUid(), Toast.LENGTH_SHORT).show();
-        return e.getName();
+        return e.getUid();
     }
-
-
-
 
     private void initComponents() {
         actionBarUtil = new ActionBarUtil(this);
